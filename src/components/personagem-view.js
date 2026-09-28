@@ -1,22 +1,21 @@
-function render() {
-    this.ulPersonagens.innerHTML = ''
-    this.personagens.forEach(personagem => {
-        const personagemLI = this.criaPersonagem(personagem)
-        this.ulPersonagens.appendChild(personagemLI)
-    })
-}
+export class PersonagemView {
+  render() {
+    this.ulPersonagens.innerHTML = "";
+    this.personagens.forEach((personagem) => {
+      const personagemLI = this.criaPersonagem(personagem);
+      this.ulPersonagens.appendChild(personagemLI);
+    });
+  }
 
-criaPersonagem = (personagem) => {
-    const personagemLI = document.createElement('li')
-    personagemLI.classList.add('personagem')
+  criaPersonagem = (personagem) => {
+    const personagemLI = document.createElement("li");
+    personagemLI.classList.add("personagem");
 
     //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
 
     //if (estaSelecionado) personagemLI.classList.add('selecionado')
 
-    personagemLI.innerHTML =
-
-    `
+    personagemLI.innerHTML = `
     <div class="container-superior">
         <div class="cabecalho">
             <div class="combate"></div>
@@ -46,7 +45,7 @@ criaPersonagem = (personagem) => {
         <h4 class="mana"></h4>
         <h4 class="vida"></h4>
     </div>
-    `
+    `;
 
     /*const containerLevel = personagemLI.querySelector('.level')
     containerLevel.onclick = (evt) => {
@@ -59,7 +58,6 @@ criaPersonagem = (personagem) => {
         this.render()
     }*/
 
-
     /*personagemLI.onclick = () => {
         const jaTem2Selecionados = this.personagensSelecionados.length === 2
         if (!jaTem2Selecionados || estaSelecionado) {
@@ -71,11 +69,10 @@ criaPersonagem = (personagem) => {
         }
     }*/
 
-    return personagemLI
-}
+    return personagemLI;
+  };
 
-
-/*adicionaSelecao = (personagem) => {
+  /*adicionaSelecao = (personagem) => {
     this.personagensSelecionados.push(personagem)
     this.render()
 }
@@ -102,3 +99,4 @@ escutarEventoDuelo() {
         this.render()
     })
 }*/
+}
