@@ -9,6 +9,10 @@ const magaJulia = new Mago("Julia", 8, "gelo", 7, 10);
 const arqueiroBruno = new Arqueiro("Bruno", 7, 8);
 const arqueiroMagoChico = new ArqueiroMago("Chico", 8, 10, "ar", 4, 8);
 
+// arqueiroBruno.#level = 15
+
 const personagens = [magoAntonio, magaJulia, arqueiroBruno, arqueiroMagoChico];
 
 new PersonagemView(personagens).render();
+
+console.log(arqueiroBruno);
