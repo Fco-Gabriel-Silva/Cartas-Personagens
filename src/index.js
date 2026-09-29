@@ -7,3 +7,5 @@ const personagemJose = new Personagem("José", 3, "Arqueiro");
 const personagens = [personagemPedrinho, personagemJose];
 
 new PersonagemView(personagens).render();
+
+console.log(personagemJose.vida);
